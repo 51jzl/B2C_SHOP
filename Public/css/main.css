@@ -1,0 +1,25 @@
+ul.head_left,ul.head_right{
+    list-style: none;
+    padding-top: 20px;
+}
+
+ul.head_left{
+    float: left;
+}
+
+ul.head_right{
+    float: right;
+}
+
+ul.head_left li,ul.head_right li{
+    float:left;
+}
+
+ul.head_left li a,ul.head_right li a{
+    font-family: courier;
+	font-size:14px;
+    height: 30px;
+    width: 100px;
+    display: block;
+}
+

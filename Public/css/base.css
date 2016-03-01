@@ -1,10 +1,22 @@
+@media screen and (max-device-width: 480px) {
+  #divMain{
+  float: none;
+  width:auto;
+  }
+  #divSidebar {
+  display:none;
+  }
+}
+
+
 /**css document***/
+
 * {
 	margin: 0;
 	padding: 0;
 }
 body {
-	font-size: 12px;
+	font-size: 1em;
 	font-family: "微软雅黑";
 	color:353535;
 	width:100%;
@@ -21,6 +33,11 @@ a {
 }
 img {
 	border: none;
+}
+.loginbanner img{
+    width: 100%;
+    display: block;
+
 }
 header, footer, nav, section, article {
   display:block;
@@ -47,7 +64,7 @@ i{
 	float:left;
 	}
 .inner{
-	width:1200px;
+	width:75em;
 	margin-left:auto;
 	margin-right: auto;
 	}
@@ -61,7 +78,7 @@ i{
 	}
 .hi{
 	float:left;
-	font-size:12px;
+	font-size:0.75em;
 	color:#999999;
 	background: url(../images/ta5.png) left center no-repeat;
 	text-indent:20px;
@@ -96,7 +113,7 @@ i{
 .logo a{
 	float:left;}
 .logo img{
-    width: 180px;
+    width: 190px;
     height: 80px;
 }
 .search{
@@ -279,7 +296,7 @@ i{
 /*****底部样式*****/
 .guid_footer{
 	width:100%;
-	height:100px;
+	height:50px;
 	float:left;
 	background:#ffcf4c;
 	padding:25px 0;
@@ -408,7 +425,7 @@ i{
 	width:100%;
 	float:left;
 	text-align:center;
-	margin-top:35px;
+	margin-top:15px;
 	}
 .beian a{
 	margin-right:25px;
@@ -492,9 +509,21 @@ i{
 	background:#edefef;
 	}
 .logmiddle{
+    height: 34.375em;
 	width:100%;
 	float:left;
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
 	}
+.regmiddle{
+    height: 40em;
+    width:100%;
+	float:left;
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
 /*********/
 .title_big2{
 	width:100%;
@@ -625,10 +654,10 @@ i{
 	}
 .logospan{
 	float:left;
-	font-size:24px;
-	color:#636363;
-	margin-left:25px;
-	line-height:120px;
+	font-size:1.5em;
+	color:#ef3b3b;
+	margin-left:1em;
+	line-height:6em;
 	}
 /****banner公用样式*****/
 .banenrtwo{

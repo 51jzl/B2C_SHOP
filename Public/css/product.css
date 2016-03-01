@@ -908,7 +908,7 @@
 	width:765px;
 	float:left;
 	text-align: center;
-	margin-top:75px;
+	margin-top:55px;
 	margin-bottom:200px;
 	}
 .loginbox{
@@ -916,7 +916,7 @@
 	border:1px solid #ededed;
 	float:right;
 	padding:30px;
-	margin-top:75px;
+	margin-top:55px;
 	margin-bottom:200px;
 	}
 .meligo{
@@ -3606,6 +3606,11 @@ margin-left:55px;}
    display:inline-block;
    text-align:center;
    }
+.register-lister{
+   text-align: left;
+}
+
+
 .passw-lister ul{
    display:inline-block;
    text-align:center;

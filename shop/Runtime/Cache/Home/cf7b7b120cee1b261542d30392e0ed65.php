@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -7,14 +7,14 @@
      <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="模版">
     <meta name="author" content="模版">
-	<link rel="icon" href="__PUBLIC__/images/index.ico">
-    <link href="__PUBLIC__/css/base.css" rel="stylesheet" type="text/css" />
-    <link href="__PUBLIC__/css/product.css" rel="stylesheet" type="text/css" />
- 	<!--[if lt IE 9]><script src="__PUBLIC__/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="__PUBLIC__/js/ie-emulation-modes-warning.js"></script>
+	<link rel="icon" href="/B2C_SHOP/Public/images/index.ico">
+    <link href="/B2C_SHOP/Public/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/B2C_SHOP/Public/css/product.css" rel="stylesheet" type="text/css" />
+ 	<!--[if lt IE 9]><script src="/B2C_SHOP/Public/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/B2C_SHOP/Public/js/ie-emulation-modes-warning.js"></script>
     <!--[if lt IE 9]>
-      <script src="__PUBLIC__/js/html5shiv.min.js"></script>
-      <script src="__PUBLIC__/js/respond.min.js"></script>
+      <script src="/B2C_SHOP/Public/js/html5shiv.min.js"></script>
+      <script src="/B2C_SHOP/Public/js/respond.min.js"></script>
     <![endif]-->
 <title>B2C_注册</title>
 </head>
@@ -24,7 +24,7 @@
      <!------头部部分------>
      <div class="loginheader">
        <div class="inner">
-          <div class="logo"><a href="../index.html"><img src="__PUBLIC__/images/51jzl.png"></a></div>
+          <div class="logo"><a href="../index.html"><img src="/B2C_SHOP/Public/images/51jzl.png"></a></div>
           <div class="logospan">注册</div>
        </div>
      </div>
@@ -45,7 +45,7 @@
 						<li>
 					         <p class="paa"><span class="pab">*</span> 注册帐号：</p>
 						     <input type="text" placeholder="" class="text2">
-							 <p class="pac"><img src="__PUBLIC__/images/ia33.png">请输入6-20位数字、字母或两个的组合</p>
+							 <p class="pac"><img src="/B2C_SHOP/Public/images/ia33.png">请输入6-20位数字、字母或两个的组合</p>
 					    </li>
 						<li>
 					         <p class="paa"><span class="pab">*</span>设置密码：</p>
@@ -59,7 +59,7 @@
 					    <li>
 					         <p class="paa"><span class="pab">*</span>验证码：</p>
 						     <input type="text" class="text4">
-						     <span class="pah"><img src="__PUBLIC__/images/ia26.png"></span>
+						     <span class="pah"><img src="/B2C_SHOP/Public/images/ia26.png"></span>
 						     <p class="pai">看不清？<span class="paj">换一张</span></p>
 					    </li>
 						<li>
@@ -83,10 +83,36 @@
      </div>
      <!------底部部分------>
 	
-	<include file="./shop/Home/View/foot2.html"/>	
+	<meta charset="utf-8">
+<style>
+.footer {
+    padding: 40px 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+}</style>
+
+<div class="loginfooter">
+       <div class="inner">
+          <div class="conaa">
+             <a href="#">关于我们</a><span>|</span>
+             <a href="#">联系我们</a><span>|</span> 
+             <a href="#">商家入驻</a><span>|</span>
+             <a href="#">友情链接</a><span>|</span>
+             <a href="#">销售联盟</a><span>|</span>
+             <a href="#">人才招聘</a>
+             </div>
+             <div class="copyright">Copyright © 2016 网纵团队 All rights reserved. 备案/许可证编号为：沪ICP备XXXXXXXX号 <a href="http://www.51jzl.com"> Design by 51jzl </a></div>
+             <div class="beian"><a href="#"><img src="/B2C_SHOP/Public/images/ic31.jpg"></a>
+             <a href="#"><img src="/B2C_SHOP/Public/images/ic32.jpg"></a>
+             <a href="#"><img src="/B2C_SHOP/Public/images/ic33.jpg"></a></div>
+       </div>
+     </div>
+	
 </body>
 <!--加载JS/朱相龙QQ:56494565-->
-	<script src="__PUBLIC__/js/jquery.min.js"></script>
-	<script src="__PUBLIC__/js/bootstrap.min.js"></script>
-	<script src="__PUBLIC__/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="/B2C_SHOP/Public/js/jquery.min.js"></script>
+	<script src="/B2C_SHOP/Public/js/bootstrap.min.js"></script>
+	<script src="/B2C_SHOP/Public/js/ie10-viewport-bug-workaround.js"></script>
 </html>
