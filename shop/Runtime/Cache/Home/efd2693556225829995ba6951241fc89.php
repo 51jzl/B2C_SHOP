@@ -27,47 +27,48 @@
     <div class="wrapper">
     <!--头部区域--->
 	<meta charset="utf-8">
-<link href="/B2C_SHOP/Public/css/base.css" rel="stylesheet" type="text/css" />
-<link href="/B2C_SHOP/Public/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/B2C_SHOP/Public/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="/B2C_SHOP/Public/css/style.css" rel="stylesheet" type="text/css"/>
 
 <div class="header">
-  <div class="headtop">
-    <div class="inner">
-      <div class="hi">B2C首页    Hi , 欢迎来到51建站啦B2C商城<a href="login/login.html" style="color: red">亲，请登录</a><a href="#">  免费注册</a></div>
-      <div class="hilink">
-        <a href="#">我的订单 <img src="/B2C_SHOP/Public/images/ta6.png"></a>
-        <span>|</span>
-        <a href="#">购物车<b> 0</b>  </a>
-        <span>|</span>
-        <a href="#"> 我的收藏</a>
-        <span>|</span>
-        <a href="#">客服中心 </a>
-        <span>|</span>
-        <a href="#">关注B2c <img src="/B2C_SHOP/Public/images/ta6.png"></a>
-      </div>
-    </div>
-  </div>
-  <div class="headdw">
-    <div class="inner">
-      <div class="logo"><a href="index.html"><img src="/B2C_SHOP/Public/images/51jzl.png"></a></div>
-      <div class="search">
-        <div class="searchone">
-            <ul>
-                <li><input type="text" value="搜索商品" class="txta"></li>
-                <li><input type="button" value="搜 索" class="btna"></li>
-            </ul>
-
+    <div class="headtop">
+        <div class="inner">
+            <div class="hi">B2C首页 Hi , 欢迎来到51建站啦B2C商城<a href="login/login.html" style="color: red">亲，请登录</a><a href="#">
+                免费注册</a></div>
+            <div class="hilink">
+                <a href="#">我的订单 <img src="/B2C_SHOP/Public/images/ta6.png"></a>
+                <span>|</span>
+                <a href="#">购物车<b> 0</b> </a>
+                <span>|</span>
+                <a href="#"> 我的收藏</a>
+                <span>|</span>
+                <a href="#">客服中心 </a>
+                <span>|</span>
+                <a href="#">关注B2c <img src="/B2C_SHOP/Public/images/ta6.png"></a>
+            </div>
         </div>
-        <!--<div class="searchtwo">
-          <a href="#">女士眼镜</a><a href="#">太阳眼镜</a>
-          <a href="#">远视眼镜</a><a href="#">隐形眼镜</a>
-          <a href="#">眼镜片</a><a href="#">眼镜架</a>
-          <a href="#">老花镜</a>
-        </div>-->
-      </div>
     </div>
-  </div>
-  </div>
+    <div class="headdw">
+        <div class="inner">
+            <div class="logo"><a href="index.html"><img src="/B2C_SHOP/Public/images/51jzl.png"></a></div>
+            <div class="search">
+                <div class="searchone">
+                    <ul>
+                        <li><input type="text" value="搜索商品" class="txta"></li>
+                        <li><input type="button" value="搜 索" class="btna"></li>
+                    </ul>
+
+                </div>
+                <!--<div class="searchtwo">
+                  <a href="#">女士眼镜</a><a href="#">太阳眼镜</a>
+                  <a href="#">远视眼镜</a><a href="#">隐形眼镜</a>
+                  <a href="#">眼镜片</a><a href="#">眼镜架</a>
+                  <a href="#">老花镜</a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
 
     <!--头部结束-->
     <div class="headernav">
@@ -150,12 +151,10 @@
             <!------右边的导航------->
             <ul class="nav">
                 <li><a href="#">首页</a></li>
-                <li><a href="#">眼镜品牌</a></li>
-                <li><a href="#">店铺品牌</a></li>
-                <li><a href="#">礼品商城</a></li>
-                <li><a href="#">按图搜索</a></li>
-                <li><a href="#">名师寻访</a></li>
-                <li><a href="#">百家争鸣</a></li>
+                <li><a href="#">品牌</a></li>
+                <li><a href="#">品牌</a></li>
+                <li><a href="#">商城</a></li>
+                <li><a href="#">搜索</a></li>
             </ul>
         </div>
     </div>
@@ -611,21 +610,25 @@
        <!-- 底部区域-->
 	<meta charset="utf-8">
 <style>
-.footer {
-    padding: 40px 0;
-    color: #999;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: 1px solid #e5e5e5;
-}</style>
+    .footer {
+        padding: 40px 0;
+        color: #999;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-top: 1px solid #e5e5e5;
+    }</style>
 
 <div class="guid_footer">
     <div class="inner">
         <ul class="guidbuy">
-            <li><a href="#"><span>正</span><p>正品行货</p></a></li>
-            <li><a href="#"><span>全</span><p>品类齐全</p></a></li>
-            <li><a href="#"><span>保</span><p>无忧售后服务保证</p></a></li>
-            <li style="margin-right:0;"><a href="#"><span>天</span><p>天天低价</p></a></li>
+            <li><a href="#"><span>正</span>
+                <p>正品行货</p></a></li>
+            <li><a href="#"><span>全</span>
+                <p>品类齐全</p></a></li>
+            <li><a href="#"><span>保</span>
+                <p>无忧售后服务保证</p></a></li>
+            <li style="margin-right:0;"><a href="#"><span>天</span>
+                <p>天天低价</p></a></li>
         </ul>
     </div>
 </div>
@@ -690,7 +693,8 @@
                 <a href="#">销售联盟</a><span>|</span>
                 <a href="#">人才招聘</a>
             </div>
-            <div class="copyright">Copyright © 2016 网纵团队 All rights reserved. 备案/许可证编号为：沪ICP备XXXXXXXX号 <a href="http://www.51jzl.com"> Design by 51jzl </a></div>
+            <div class="copyright">Copyright © 2016 网纵团队 All rights reserved. 备案/许可证编号为：沪ICP备XXXXXXXX号 <a
+                    href="http://www.51jzl.com"> Design by 51jzl </a></div>
             <div class="beian"><a href="#"><img src="/B2C_SHOP/Public/images/ic31.jpg"></a>
                 <a href="#"><img src="/B2C_SHOP/Public/images/ic32.jpg"></a>
                 <a href="#"><img src="/B2C_SHOP/Public/images/ic33.jpg"></a></div>
