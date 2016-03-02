@@ -47,17 +47,17 @@
                     <ul>
                         <li>
                             <p class="paa"><span class="pab">*</span> 注册帐号：</p>
-                            <input id="username" name="username" type="text" placeholder="" class="text2" >
-                            <p class="pac"><img src="/B2C_SHOP/Public/images/ia33.png">请输入6-20位数字、字母或两个的组合</p>
+                            <input id="username" name="username" type="text" placeholder="请输入6-20位数字、字母或两个的组合" class="text2" />
+                            <p class="pac"><span id="userinfo"></span></p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>设置密码：</p>
-                            <input id="password" name="password" type="text" placeholder="" class="text2">
+                            <input id="password" name="password" type="text" placeholder="请输入8-20位数字字母组合密码" class="text2">
                             <p class="pac"></p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>确认密码：</p>
-                            <input id="repass" name="repass" type="text" placeholder="" class="text2">
+                            <input id="repass" name="repass" type="text" placeholder="请再次输入密码" class="text2">
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>验证码：</p>
@@ -131,12 +131,16 @@
         }
 
     }
+
     var val = {
         name:document.getElementById("username"),
         pwd:document.getElementById("password")
     };
     val.name.onblur= function () {
         checkName(val.name.value);
+    }
+    function hide(){
+        document.getElementById("username").style.display="";
     }
 
     function check(){
