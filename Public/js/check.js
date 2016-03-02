@@ -1,270 +1,293 @@
-function getFocus(obj)  
-{
-obj.focus();
+function RegCheck(RegForm){
+    if(RegForm.userName.value == ""){
+        alert("ç”¨æˆ·åä¸èƒ½ä¸ºç©º");
+        RegForm.userName.focus;
+        return(false);
+    }
+    if (RegForm.password.value == ""){
+        alert("å¯†ç ä¸èƒ½ä¸ºç©º");
+        return (false);
+    }
+    if (RegForm.repass.value != RegForm.password.value){
+        alert("ä¸¤æ¬¡å¯†ç ä¸ä¸€è‡´");
+        return(false);
+    }
+}
+
+function ajaxRegCheck(RegForm) {
+    var xmlhttp;
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    }
+    else {// code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+}
+
+function getFocus(obj) {
+    obj.focus();
 }
 function getobj(ids) {
-return document.getElementById(ids);
+    return document.getElementById(ids);
 }
 function getobjs(name) {
-return document.getElementsByName(name);
+    return document.getElementsByName(name);
 }
-function getobjn(name,j) {
-return document.getElementsByName(name)[j];
+function getobjn(name, j) {
+    return document.getElementsByName(name)[j];
 }
-function addTextClass(n,o,text){
-var textName="text"+o.name;
-getobj(textName).className=n+' '+getobj(textName).className;
-getobj(textName).innerHTML = text;
-getFocus(o);
+function addTextClass(n, o, text) {
+    var textName = "text" + o.name;
+    getobj(textName).className = n + ' ' + getobj(textName).className;
+    getobj(textName).innerHTML = text;
+    getFocus(o);
 }
-function ajaxUserName(o,path){
-var un=o.value;
-if (un.length == 0) {
-addTextClass('red_a',o,"ÓÃ»§Ãû²»ÄÜÎª¿Õ!");
-return false;
-}
-else{
-
-var reg = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
-if (!reg.test(un)) {
-addTextClass('red_a',o,"ÇëÌîÐ´ÓÐÐ§EMAIL×÷ÎªÓÃ»§");
-return false;
-}
-else{
-
-var boo=true;
-var url = path + "?xmls=lib/register.xmls&roodm=" + Math.random();
-    var _data = {userName: un,method: 'username'};
-    $.ajax({
-        type: "GET", url: url, data: _data, async: false, success: function(response) {
-        if(response!="1"){
-        addTextClass('red_a',o,'´ËÓÃ»§ÃûÒÑ±»×¢²á');
-        boo= false;
-        }
-        else{
-        addTextClass('',o,'');
-        boo= true;
-        }
-        }
-    });
-    return boo;
-    }
-}
-}
-
-
-function checkUserName(o){
-var un=o.value;
-if (un.length == 0) {
-addTextClass('red_a',o,"ÓÃ»§Ãû²»ÄÜÎª¿Õ!");
-return false;
-}
-if(un.indexOf('@')>0){
-var reg = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
-if (!reg.test(un)) {
-addTextClass('red_a',o,"E-mail¸ñÊ½²»ÕýÈ·!");
-return false;
-}
-}
-else{
-var reg = /(^(13[3-9]|15[0|1|3|6|7|8|9]|18[5|6|8|9])\d{8}$)/;
-    if(un.length != 11 || un.match(/^(-|\+)?\d+$/) == null){
-    addTextClass('red_a',o,"ÊÖ»ú¸ñÊ½²»ÕýÈ·!");
-    return false;
-    }
-}
-return true;
-}
-
-
-function checkPassWord(o){
-var un=o.value;
-if (un.length == 0) {
-addTextClass('red_a',o,"ÃÜÂë²»ÄÜÎª¿Õ!");
-return false;
-}
-else if(un.length<6 || un.length>15){
-addTextClass('red_a',o,"ÃÜÂë±ØÐëÎªÁùÎ»ÖÁÊ®ÎåÎ»×Ö·û!");
-return false;
-}
-else{
-addTextClass('',o,"");
-return true;
-}
-}
-
-function checkAffirmPwd(o){
-var un=o.value;
-if (un.length == 0) {
-addTextClass('red_a',o,"È·ÈÏÃÜÂë²»ÄÜÎª¿Õ!");
-return false;
-}
-else {
-    if (un != getobj("Password").value) {
-    addTextClass('red_a',o,"Á½´ÎÊäÈëÃÜÂë²»Ò»ÖÂ!");
-    return false;
+function ajaxUserName(o, path) {
+    var un = o.value;
+    if (un.length == 0) {
+        addTextClass('red_a', o, "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½!");
+        return false;
     }
     else {
-    addTextClass('',o,"");
-    return true;
-    }
 
+        var reg = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
+        if (!reg.test(un)) {
+            addTextClass('red_a', o, "ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½Ð§EMAILï¿½ï¿½Îªï¿½Ã»ï¿½");
+            return false;
+        }
+        else {
+
+            var boo = true;
+            var url = path + "?xmls=lib/register.xmls&roodm=" + Math.random();
+            var _data = {userName: un, method: 'username'};
+            $.ajax({
+                type: "GET", url: url, data: _data, async: false, success: function (response) {
+                    if (response != "1") {
+                        addTextClass('red_a', o, 'ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ñ±ï¿½×¢ï¿½ï¿½');
+                        boo = false;
+                    }
+                    else {
+                        addTextClass('', o, '');
+                        boo = true;
+                    }
+                }
+            });
+            return boo;
+        }
+    }
 }
-}
-function checkEmail(o){
-var reg = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
-var un=o.value;
-if (un.length == 0) {
-    addTextClass('red_a',o,"EMAIL²»ÄÜÎª¿Õ!");
-    getFocus(o);
-    return false;
-}
-else {
-    if (!reg.test(un)) {
-    addTextClass('red_a',o,"ÇëÌîÐ´ÓÐÐ§EMAIL×÷ÎªÓÃ»§!");
-    getFocus(o);
-    return false;
+
+
+function checkUserName(o) {
+    var un = o.value;
+    if (un.length == 0) {
+        addTextClass('red_a', o, "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½!");
+        return false;
+    }
+    if (un.indexOf('@') > 0) {
+        var reg = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
+        if (!reg.test(un)) {
+            addTextClass('red_a', o, "E-mailï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½È·!");
+            return false;
+        }
     }
     else {
-    addTextClass('',o,"");
+        var reg = /(^(13[3-9]|15[0|1|3|6|7|8|9]|18[5|6|8|9])\d{8}$)/;
+        if (un.length != 11 || un.match(/^(-|\+)?\d+$/) == null) {
+            addTextClass('red_a', o, "ï¿½Ö»ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½È·!");
+            return false;
+        }
+    }
     return true;
+}
+
+
+function checkPassWord(o) {
+    var un = o.value;
+    if (un.length == 0) {
+        addTextClass('red_a', o, "ï¿½ï¿½ï¿½ë²»ï¿½ï¿½Îªï¿½ï¿½!");
+        return false;
+    }
+    else if (un.length < 6 || un.length > 15) {
+        addTextClass('red_a', o, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½Ê®ï¿½ï¿½Î»ï¿½Ö·ï¿½!");
+        return false;
+    }
+    else {
+        addTextClass('', o, "");
+        return true;
     }
 }
+
+function checkAffirmPwd(o) {
+    var un = o.value;
+    if (un.length == 0) {
+        addTextClass('red_a', o, "È·ï¿½ï¿½ï¿½ï¿½ï¿½ë²»ï¿½ï¿½Îªï¿½ï¿½!");
+        return false;
+    }
+    else {
+        if (un != getobj("Password").value) {
+            addTextClass('red_a', o, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»Ò»ï¿½ï¿½!");
+            return false;
+        }
+        else {
+            addTextClass('', o, "");
+            return true;
+        }
+
+    }
+}
+function checkEmail(o) {
+    var reg = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
+    var un = o.value;
+    if (un.length == 0) {
+        addTextClass('red_a', o, "EMAILï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½!");
+        getFocus(o);
+        return false;
+    }
+    else {
+        if (!reg.test(un)) {
+            addTextClass('red_a', o, "ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½Ð§EMAILï¿½ï¿½Îªï¿½Ã»ï¿½!");
+            getFocus(o);
+            return false;
+        }
+        else {
+            addTextClass('', o, "");
+            return true;
+        }
+    }
 }
 
-function checkProvince(o,txt){
-var un=o.value;
-if (un == "0|0") {
-    addTextClass('red_a',o,txt);
-    getFocus(o);
-    return false;
-}
-else{
-addTextClass('red_a',o,"");
-return true;
-}
-
-}
-function checkAddress(o){
-var un=o.value;
-if (un.length == 0) {
-    addTextClass('red_a',o,"ÇëÌîÐ´½ÖµÀµØÖ·!");
-    getFocus(o);
-    return false;
-}
-else{
-addTextClass('red_a',o,"");
-return true;
-}
-}
-
-function notEmpty(o,txt){
-var un=o.value;
-if (un.length == 0) {
-    addTextClass('red_a',o,txt);
-    getFocus(o);
-    return false;
-}
-else{
-addTextClass('red_a',o,"");
-return true;
-}
-}
-function notEmpty0(o,txt){
-var un=o.value;
-if (un.length == 0 ||un==0) {
-    addTextClass('red_a',o,txt);
-    getFocus(o);
-    return false;
-}
-else{
-addTextClass('red_a',o,"");
-return true;
-}
-}
-function checkTorM(i,o){
-var un=o.value;
-var un2=i.value;
-if (un.length == 0 && un2.length == 0) {
-    addTextClass('red_a',i,"ÊÖ»úºÍµç»°ÖÁÉÙÌîÐ´Ò»¸ö!");
-    getFocus(i);
-    return false;
-}
-else{
-addTextClass('red_a',i,"");
-return true;
-}
-}
-
-function checkTel(o){
-var un=o.value;
-if (un.length == 0) {
-addTextClass('red_a',o,"ÊÖ»ú²»ÄÜÎª¿Õ!");
-return false;
-}
-
-var reg = /(^(13[3-9]|15[0|1|3|6|7|8|9]|18[5|6|8|9])\d{8}$)/;
-    if(un.length != 11 || un.match(/^(-|\+)?\d+$/) == null){
-    addTextClass('red_a',o,"ÊÖ»ú¸ñÊ½²»ÕýÈ·!");
-    return false;
+function checkProvince(o, txt) {
+    var un = o.value;
+    if (un == "0|0") {
+        addTextClass('red_a', o, txt);
+        getFocus(o);
+        return false;
+    }
+    else {
+        addTextClass('red_a', o, "");
+        return true;
     }
 
-return true;
+}
+function checkAddress(o) {
+    var un = o.value;
+    if (un.length == 0) {
+        addTextClass('red_a', o, "ï¿½ï¿½ï¿½ï¿½Ð´ï¿½Öµï¿½ï¿½ï¿½Ö·!");
+        getFocus(o);
+        return false;
+    }
+    else {
+        addTextClass('red_a', o, "");
+        return true;
+    }
 }
 
-function checkChecked(o){
-return $(o).is(':checked');
+function notEmpty(o, txt) {
+    var un = o.value;
+    if (un.length == 0) {
+        addTextClass('red_a', o, txt);
+        getFocus(o);
+        return false;
+    }
+    else {
+        addTextClass('red_a', o, "");
+        return true;
+    }
+}
+function notEmpty0(o, txt) {
+    var un = o.value;
+    if (un.length == 0 || un == 0) {
+        addTextClass('red_a', o, txt);
+        getFocus(o);
+        return false;
+    }
+    else {
+        addTextClass('red_a', o, "");
+        return true;
+    }
+}
+function checkTorM(i, o) {
+    var un = o.value;
+    var un2 = i.value;
+    if (un.length == 0 && un2.length == 0) {
+        addTextClass('red_a', i, "ï¿½Ö»ï¿½ï¿½Íµç»°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´Ò»ï¿½ï¿½!");
+        getFocus(i);
+        return false;
+    }
+    else {
+        addTextClass('red_a', i, "");
+        return true;
+    }
 }
 
-function checkRegister(form,path){
-var end=true;
-end=checkChecked(form.Clause)? end:false;
-end=checkAffirmPwd(form.AffirmPwd)? end:false;
-end=checkPassWord(form.Password)? end:false;
-end=ajaxUserName(form.UserName,path)? end:false;
+function checkTel(o) {
+    var un = o.value;
+    if (un.length == 0) {
+        addTextClass('red_a', o, "ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½!");
+        return false;
+    }
 
-return end;
+    var reg = /(^(13[3-9]|15[0|1|3|6|7|8|9]|18[5|6|8|9])\d{8}$)/;
+    if (un.length != 11 || un.match(/^(-|\+)?\d+$/) == null) {
+        addTextClass('red_a', o, "ï¿½Ö»ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½È·!");
+        return false;
+    }
+
+    return true;
 }
 
-function checkLogin(form){
-var end=true;
-end=checkPassWord(form.Password)? end:false;
-end=checkUserName(form.UserName)? end:false;
-return end;
+function checkChecked(o) {
+    return $(o).is(':checked');
 }
 
+function checkRegister(form, path) {
+    var end = true;
+    end = checkChecked(form.Clause) ? end : false;
+    end = checkAffirmPwd(form.AffirmPwd) ? end : false;
+    end = checkPassWord(form.Password) ? end : false;
+    end = ajaxUserName(form.UserName, path) ? end : false;
 
-
-
-function checkInfo(form){
-
-var end=true;
-end=checkEmail(form.Email)? end:false;
-end=checkTorM(form.Mobile,form.Tel)? end:false;
-end=notEmpty0(getobj("CityID"),"ÇëÌîÐ´Ê¡(ÊÐ)¡¢Çø!")? end:false;
-end=notEmpty(form.Address,'ÏêÏ¸µØÖ·²»ÄÜÎª¿Õ!')? end:false;
-return end;
-
+    return end;
 }
 
-
-
-function checkInfor2(form){
-var end=true;
-end=checkEmail(form.Mail)? end:false;
-end=checkTel(form.Mobile)? end:false;
-end=notEmpty(form.Fullname,'ÐÕÃû²»ÄÜÎª¿Õ!')? end:false;
-return end;
-
+function checkLogin(form) {
+    var end = true;
+    end = checkPassWord(form.Password) ? end : false;
+    end = checkUserName(form.UserName) ? end : false;
+    return end;
 }
 
 
-function checkPW(form){
-var end=true;
-end=checkAffirmPwd(form.AffirmPwd)? end:false;
-end=checkPassWord(form.Password)? end:false;
-end=checkPassWord(form.ysPassword)? end:false;
-return end;
+function checkInfo(form) {
+
+    var end = true;
+    end = checkEmail(form.Email) ? end : false;
+    end = checkTorM(form.Mobile, form.Tel) ? end : false;
+    end = notEmpty0(getobj("CityID"), "ï¿½ï¿½ï¿½ï¿½Ð´Ê¡(ï¿½ï¿½)ï¿½ï¿½ï¿½ï¿½!") ? end : false;
+    end = notEmpty(form.Address, 'ï¿½ï¿½Ï¸ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½!') ? end : false;
+    return end;
+
+}
+
+
+function checkInfor2(form) {
+    var end = true;
+    end = checkEmail(form.Mail) ? end : false;
+    end = checkTel(form.Mobile) ? end : false;
+    end = notEmpty(form.Fullname, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½!') ? end : false;
+    return end;
+
+}
+
+
+function checkPW(form) {
+    var end = true;
+    end = checkAffirmPwd(form.AffirmPwd) ? end : false;
+    end = checkPassWord(form.Password) ? end : false;
+    end = checkPassWord(form.ysPassword) ? end : false;
+    return end;
 
 }
 

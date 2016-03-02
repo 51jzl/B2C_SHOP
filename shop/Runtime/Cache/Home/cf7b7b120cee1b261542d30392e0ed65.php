@@ -13,6 +13,7 @@
     <!--[if lt IE 9]>
     <script src="/B2C_SHOP/Public/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="/B2C_SHOP/Public/js/ie-emulation-modes-warning.js"></script>
+
     <!--[if lt IE 9]>
     <script src="/B2C_SHOP/Public/js/html5shiv.min.js"></script>
     <script src="/B2C_SHOP/Public/js/respond.min.js"></script>
@@ -42,20 +43,21 @@
                 <div class="regis-title">&nbsp;</div>
                 <div class="regis-box"></div>
                 <div class="passwofe-one" style="float:left;margin-top:20px;width:800px;">
+                    <form name="RegForm" method="post" action="<?php echo U('register/Checkregister');?>" onSubmit="return check()">
                     <ul>
                         <li>
                             <p class="paa"><span class="pab">*</span> 注册帐号：</p>
-                            <input type="text" placeholder="" class="text2">
+                            <input id="username" name="username" type="text" placeholder="" class="text2" >
                             <p class="pac"><img src="/B2C_SHOP/Public/images/ia33.png">请输入6-20位数字、字母或两个的组合</p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>设置密码：</p>
-                            <input type="text" placeholder="" class="text2">
+                            <input id="password" name="password" type="text" placeholder="" class="text2">
                             <p class="pac"></p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>确认密码：</p>
-                            <input type="text" placeholder="" class="text2">
+                            <input id="repass" name="repass" type="text" placeholder="" class="text2">
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>验证码：</p>
@@ -70,9 +72,10 @@
                         </li>
                         <li>
                             <p class="paa"></p>
-                            <a href="#" class="but2">马上注册</a>
+                            <input type="submit" name="submit" value="马上注册" class="but2" />
                         </li>
                     </ul>
+                    </form>
                 </div>
                 <div class="regin-right" style="height:430px;">
                     <p>已经注册过？</p>
@@ -117,4 +120,39 @@
 <script src="/B2C_SHOP/Public/js/jquery.min.js"></script>
 <script src="/B2C_SHOP/Public/js/bootstrap.min.js"></script>
 <script src="/B2C_SHOP/Public/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript">
+    function checkName(username){
+        if(username != ""){
+            /**alert("用户名输入正确");**/
+            return true;
+        }else{
+            /*alert("用户名不能为空");*/
+            return false;
+        }
+
+    }
+    var val = {
+        name:document.getElementById("username"),
+        pwd:document.getElementById("password")
+    };
+    val.name.onblur= function () {
+        checkName(val.name.value);
+    }
+
+    function check(){
+        var nameOk=checkName(val.name.value);
+/*        alert(checkName(val.name.value));
+        if(checkName(val.name.value)=="true"){
+            nameOk="true";
+        }*/
+        if(nameOk){
+            alert("用户名判断成功");
+        }else{
+            alert("用户名不能为空");
+        }
+
+        return false;
+    }
+</script>
+
 </html>
