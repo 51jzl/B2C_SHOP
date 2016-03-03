@@ -10,6 +10,7 @@
     <link rel="icon" href="__PUBLIC__/images/index.ico">
     <link href="__PUBLIC__/css/base.css" rel="stylesheet" type="text/css"/>
     <link href="__PUBLIC__/css/product.css" rel="stylesheet" type="text/css"/>
+    <script src="__PUBLIC__/js/check.js"></script>
     <!--[if lt IE 9]>
     <script src="__PUBLIC__/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="__PUBLIC__/js/ie-emulation-modes-warning.js"></script>
@@ -42,7 +43,7 @@
             <div class="passw_box">
                 <div class="regis-title">&nbsp;</div>
                 <div class="regis-box"></div>
-                <div class="passwofe-one" style="float:left;margin-top:20px;width:800px;">
+                <div id="reg_info" class="passwofe-one" style="float:left;margin-top:20px;width:800px;">
                     <form name="RegForm" method="post" action="{:U('register/Checkregister')}" onSubmit="return check()">
                     <ul>
                         <li>
@@ -61,7 +62,7 @@
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>验证码：</p>
-                            <input type="text" class="text4">
+                            <input name="captcha" type="text" class="text4">
                             <span class="pah"><img src="__PUBLIC__/images/ia26.png"></span>
                             <p class="pai">看不清？<span class="paj">换一张</span></p>
                         </li>
@@ -72,7 +73,7 @@
                         </li>
                         <li>
                             <p class="paa"></p>
-                            <input type="submit" name="submit" value="马上注册" class="but2" />
+                            <input type="submit" name="submit" value="马上注册" class="but2" onclick=""/>
                         </li>
                     </ul>
                     </form>
@@ -102,9 +103,7 @@
             /*alert("用户名不能为空");*/
             return false;
         }
-
     }
-
     var val = {
         name:document.getElementById("username"),
         pwd:document.getElementById("password")

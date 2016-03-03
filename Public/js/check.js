@@ -1,3 +1,31 @@
+function ajax_post_reg(){
+    //获取接受返回信息层
+    var reg_info = document.getElementByIdx_x("reg_info");
+    //获取表单对象
+    var info=document.RegForm;
+    //获取用户信息值
+    var username= info.username.value;
+    var password=info.password.value;
+    var captcha=info.captcha.value;
+    //接收表单的url
+    var url="{:U('register/Checkregister')}";
+    //需要提交的值:
+    var postStr = "username="+username+"&password="+password;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 function RegCheck(RegForm){
     if(RegForm.userName.value == ""){
         alert("用户名不能为空");

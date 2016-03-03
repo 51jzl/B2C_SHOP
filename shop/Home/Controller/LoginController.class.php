@@ -8,11 +8,11 @@ class LoginController extends Controller {
     }
     public function checkLogin(){//检查登录
     	$Columns=R("DbName/dbid");//动态数据库
-    	$password=I('password');
+    	$password=md5(I('password'));
     	$username=I('username');
     	if ($username&&$password) {
     		$where['username'] = $username;
-    		$where['password']	=md5($password);
+    		$where['password']	=$password;
     		$list = M("user")->field("userid,password")->where($where)->find();
     		// 注意这里必须小写/* dump($list);
     		if ($list['password'] == $password) {
