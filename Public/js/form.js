@@ -41,6 +41,7 @@ $(function(){
 	$('.form').bind('submit', function(){
 		ajaxSubmit(this, function(data){
 			if(data.status=='ok'){
+				alert("注册成功");
 				returnSuccess(data.info);//成功返回参数
 			}else{
 				returnError(data.info);//失败返回参数

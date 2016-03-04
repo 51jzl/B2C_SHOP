@@ -10,7 +10,7 @@
     <link rel="icon" href="__PUBLIC__/images/index.ico">
     <link href="__PUBLIC__/css/base.css" rel="stylesheet" type="text/css"/>
     <link href="__PUBLIC__/css/product.css" rel="stylesheet" type="text/css"/>
-    <script src="__PUBLIC__/js/check.js"></script>
+    <script src="__PUBLIC__/js/form.js"></script>
     <!--[if lt IE 9]>
     <script src="__PUBLIC__/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="__PUBLIC__/js/ie-emulation-modes-warning.js"></script>
@@ -44,21 +44,21 @@
                 <div class="regis-title">&nbsp;</div>
                 <div class="regis-box"></div>
                 <div id="reg_info" class="passwofe-one" style="float:left;margin-top:20px;width:800px;">
-                    <form name="RegForm" method="post" action="{:U('register/Checkregister')}" onSubmit="return check()">
+                    <form name="RegForm" method="post" action="{:U('register/Checkregister')}">
                     <ul>
                         <li>
                             <p class="paa"><span class="pab">*</span> 注册帐号：</p>
-                            <input id="username" name="username" type="text" placeholder="请输入6-20位数字、字母或两个的组合" class="text2" />
+                            <input id="username" name="username" maxlength="20"  type="text" placeholder="请输入6-20位数字、字母或两个的组合" class="text2" />
                             <p class="pac"><span id="userinfo"></span></p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>设置密码：</p>
-                            <input id="password" name="password" type="text" placeholder="请输入8-20位数字字母组合密码" class="text2">
+                            <input id="password" name="password" type="password" placeholder="请输入8-20位数字字母组合密码" class="text2">
                             <p class="pac"></p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>确认密码：</p>
-                            <input id="repass" name="repass" type="text" placeholder="请再次输入密码" class="text2">
+                            <input id="repass" name="repass" type="password" placeholder="请再次输入密码" class="text2">
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>验证码：</p>
@@ -73,7 +73,7 @@
                         </li>
                         <li>
                             <p class="paa"></p>
-                            <input type="submit" name="submit" value="马上注册" class="but2" onclick=""/>
+                            <input type="submit" name="submit" value="马上注册" class="but2" onclick="" />
                         </li>
                     </ul>
                     </form>
@@ -91,44 +91,12 @@
 
 <include file="./shop/Home/View/foot2.html"/>
 </body>
+<script>
+
+</script>
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/js/ie10-viewport-bug-workaround.js"></script>
-<script type="text/javascript">
-    function checkName(username){
-        if(username != ""){
-            /**alert("用户名输入正确");**/
-            return true;
-        }else{
-            /*alert("用户名不能为空");*/
-            return false;
-        }
-    }
-    var val = {
-        name:document.getElementById("username"),
-        pwd:document.getElementById("password")
-    };
-    val.name.onblur= function () {
-        checkName(val.name.value);
-    }
-    function hide(){
-        document.getElementById("username").style.display="";
-    }
 
-    function check(){
-        var nameOk=checkName(val.name.value);
-/*        alert(checkName(val.name.value));
-        if(checkName(val.name.value)=="true"){
-            nameOk="true";
-        }*/
-        if(nameOk){
-            alert("用户名判断成功");
-        }else{
-            alert("用户名不能为空");
-        }
-
-        return false;
-    }
-</script>
 
 </html>

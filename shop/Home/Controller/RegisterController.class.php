@@ -15,6 +15,7 @@ class RegisterController extends Controller {
     		echo JSON_ENCODE ( $data );
     	} else {
     		$user->add ();
+
     		$this->ajaxReturn(array('status' => 'ok', 'info' => '注册成功'));
     	}
     }
