@@ -12,10 +12,9 @@ class RegisterController extends Controller {
     	if (! $user->create ()) {
     		$data ["status"] ='no';
     		$data ["txt"] = $user->getError ();
-    		echo JSON_ENCODE ( $data );
+    		echo JSON_ENCODE ($data);
     	} else {
     		$user->add ();
-
     		$this->ajaxReturn(array('status' => 'ok', 'info' => '注册成功'));
     	}
     }

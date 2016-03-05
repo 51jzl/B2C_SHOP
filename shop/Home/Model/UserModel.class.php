@@ -30,11 +30,11 @@ class UserModel extends Model {
         // 正则验证密码 [需包含字母数字以及@*#中的一种,长度为6-22位]
         array('password', '/^([a-zA-Z0-9@*#]{6,22})$/', '密码格式不正确,请重新输入！', 0),
         array('repassword', 'password', '确认密码不正确', 0, 'confirm'), // 验证确认密码是否和密码一致
-    	array('verify','require','请填写识别码！'), //默认情况下用正则进行验证
-    	array('verify', 'CheckVerify', '识别码错误！', 3, 'callback')//判断验证码是否正确调用当前模版的一个方法
+    	array('captcha','require','请填写识别码！'), //默认情况下用正则进行验证
+    	array('captcha', 'CheckCaptcha', '识别码错误！', 3, 'callback')//判断验证码是否正确调用当前模版的一个方法
     );
     
-    public function CheckVerify(){
+    public function CheckCaptcha(){
     	$verify = new \Think\Verify ();
     	if (! $verify->check ( $_POST ['verify'] )) {
     		return false;

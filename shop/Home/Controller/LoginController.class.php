@@ -23,7 +23,7 @@ class LoginController extends Controller {
     			$this->ajaxReturn(array('status' => 'no', 'info' => '用户号码或者密码不正确'));
     		}
     	}else {
-    			$this->ajaxReturn(array('status' => 'no', 'info' => '不正确'));
+    			$this->ajaxReturn(array('status' => 'no', 'info' => '请输入用户名密码'));
     	}
     }
 }
