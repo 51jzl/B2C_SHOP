@@ -3829,9 +3829,24 @@ margin-left:55px;}
 .passwofe-one li .pak .pal{
    color:#ff5400;
    }
+.tip{
+	display:block;
+	float:left;
+	color: red;
+	margin-top:5px;
+	margin-right:4px;
+	}
+.tip li{
+	display:block;
+	float:left;
+	color: red;
+	margin-left: 110px;
+	margin-top:5px;
+	margin-right:4px;
+}
+
  .pac img{
 	 display:block;
-	 float:left;
 	 float:left;
 	 margin-top:5px;
 	 margin-right:4px;}

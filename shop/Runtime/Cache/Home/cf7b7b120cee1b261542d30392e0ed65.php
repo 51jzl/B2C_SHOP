@@ -10,7 +10,7 @@
     <link rel="icon" href="/B2C_SHOP/Public/images/index.ico">
     <link href="/B2C_SHOP/Public/css/base.css" rel="stylesheet" type="text/css"/>
     <link href="/B2C_SHOP/Public/css/product.css" rel="stylesheet" type="text/css"/>
-    <script src="/B2C_SHOP/Public/js/form.js"></script>
+
     <!--[if lt IE 9]>
     <script src="/B2C_SHOP/Public/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="/B2C_SHOP/Public/js/ie-emulation-modes-warning.js"></script>
@@ -44,27 +44,32 @@
                 <div class="regis-title">&nbsp;</div>
                 <div class="regis-box"></div>
                 <div id="reg_info" class="passwofe-one" style="float:left;margin-top:20px;width:800px;">
-                    <form name="RegForm" method="post" action="<?php echo U('register/Checkregister');?>">
+                    <form class="form" method="post" action="<?php echo U('register/Checkregister');?>">
                     <ul>
                         <li>
                             <p class="paa"><span class="pab">*</span> 注册帐号：</p>
                             <input id="username" name="username" maxlength="20"  type="text" placeholder="请输入6-20位数字、字母或两个的组合" class="text2" />
-                            <p class="pac"><span id="userinfo"></span></p>
+                            <p class="tip"><span  class="errorUserName"></span></p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>设置密码：</p>
-                            <input id="password" name="password" type="password" placeholder="请输入8-20位数字字母组合密码" class="text2">
-                            <p class="pac"></p>
+                            <input id="password" name="password" type="password" placeholder="请输入6-22位数字字母组合密码" class="text2">
+                            <p class="tip"><span  class="errorPassword"></span></p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>确认密码：</p>
-                            <input id="repass" name="repass" type="text" placeholder="请再次输入密码" class="text2">
+                            <input id="repass" name="repass" type="password" placeholder="请再次输入密码" class="text2">
+                            <p class="tip"><span  class="errorRepass"></span></p>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>验证码：</p>
                             <input name="captcha" type="text" class="text4">
-                            <span class="pah"><img src="/B2C_SHOP/Public/images/ia26.png"></span>
-                            <p class="pai">看不清？<span class="paj">换一张</span></p>
+                            <span class="pah"><img id="identifyImg" alt="验证码" class="code" onclick="loadIdentify()"></span>
+                            <p class="pai">看不清？<span class="paj" onclick="loadIdentify()">换一张</span></p>
+
+                        </li>
+                        <li class="tip">
+                            <p class="paa" ><span  class="errorCaptcha"></span></p>
                         </li>
                         <li>
                             <p class="paa"></p>
@@ -118,12 +123,19 @@
 </div>
 
 </body>
-<script>
+    <script type="text/javascript">
+            function loadIdentify(){
+                document.getElementById("identifyImg").src = '../index.php/Home/Code/code?' + Math.random()
+            }
+    loadIdentify();
+    var url="<?php echo U('Home/Index/index');?>";
 
 </script>
 <script src="/B2C_SHOP/Public/js/jquery.min.js"></script>
 <script src="/B2C_SHOP/Public/js/bootstrap.min.js"></script>
 <script src="/B2C_SHOP/Public/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/B2C_SHOP/Public/js/form.js"></script>
+<script src="/B2C_SHOP/Public/js/register.js"></script>
 
 
 </html>

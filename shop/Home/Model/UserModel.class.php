@@ -36,7 +36,7 @@ class UserModel extends Model {
     
     public function CheckCaptcha(){
     	$verify = new \Think\Verify ();
-    	if (! $verify->check ( $_POST ['verify'] )) {
+    	if (! $verify->check ( $_POST ['captcha'] )) {
     		return false;
     	}
     	else{

@@ -11,7 +11,7 @@ class RegisterController extends Controller {
     	$user = D ( 'user' );
     	if (! $user->create ()) {
     		$data ["status"] ='no';
-    		$data ["txt"] = $user->getError ();
+    		$data ["info"] = $user->getError ();
     		echo JSON_ENCODE ($data);
     	} else {
     		$user->add ();
