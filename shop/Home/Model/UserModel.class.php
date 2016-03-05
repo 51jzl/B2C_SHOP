@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by 朱相龙.
- * User: 56494565 <56494565@qq.com>
- * Date: 2015/12/25
- * Time: 17:23
- */
 namespace Home\Model;
 use Think\Model;
 class UserModel extends Model {
@@ -29,9 +23,9 @@ class UserModel extends Model {
         array('username', '', '该用户名已被注册！', 0, 'unique', 1), // 在新增的时候验证name字段是否唯一
         // 正则验证密码 [需包含字母数字以及@*#中的一种,长度为6-22位]
         array('password', '/^([a-zA-Z0-9@*#]{6,22})$/', '密码格式不正确,请重新输入！', 0),
-        array('repassword', 'password', '确认密码不正确', 0, 'confirm'), // 验证确认密码是否和密码一致
-    	array('captcha','require','请填写识别码！'), //默认情况下用正则进行验证
-    	array('captcha', 'CheckCaptcha', '识别码错误！', 3, 'callback')//判断验证码是否正确调用当前模版的一个方法
+        array('repassword', 'password', '确认密码不正确！', 0, 'confirm'), // 验证确认密码是否和密码一致
+    	array('captcha','require','请填写验证码！'), //默认情况下用正则进行验证
+    	array('captcha', 'CheckCaptcha', '验证码错误！', 3, 'callback')//判断验证码是否正确调用当前模版的一个方法
     );
     
     public function CheckCaptcha(){

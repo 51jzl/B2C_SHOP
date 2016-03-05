@@ -48,28 +48,35 @@
                     <ul>
                         <li>
                             <p class="paa"><span class="pab">*</span> 注册帐号：</p>
-                            <input id="username" name="username" maxlength="20"  type="text" placeholder="请输入6-20位数字、字母或两个的组合" class="text2" />
-                            <p class="tip"><span  class="errorUserName"></span></p>
+                            <input id="username" name="username" maxlength="30"  type="text" placeholder="请输入6-30位数字、字母或两个的组合" class="text2" />
+                            <span  class="errorUserName tip"></span>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>设置密码：</p>
                             <input id="password" name="password" type="password" placeholder="请输入6-22位数字字母组合密码" class="text2">
-                            <p class="tip"><span  class="errorPassword"></span></p>
+                            <span  class="errorPassword tip"></span>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>确认密码：</p>
-                            <input id="repass" name="repass" type="password" placeholder="请再次输入密码" class="text2">
-                            <p class="tip"><span  class="errorRepass"></span></p>
+                            <input id="repassword" name="repassword" type="password" placeholder="请再次输入密码" class="text2">
+                            <span  class="errorRepassword tip"></span>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>验证码：</p>
-                            <input name="captcha" type="text" class="text4">
-                            <span class="pah"><img id="identifyImg" alt="验证码" class="code" onclick="loadIdentify()"></span>
-                            <p class="pai">看不清？<span class="paj" onclick="loadIdentify()">换一张</span></p>
-
-                        </li>
-                        <li class="tip">
-                            <p class="paa" ><span  class="errorCaptcha"></span></p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input name="captcha" type="text" class="text4">
+                                        <span class="pah"><img id="identifyImg" alt="验证码" class="code" onclick="loadIdentify()"></span>
+                                        <p class="pai">看不清？<span class="paj" onclick="loadIdentify()">换一张</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       <span  class="errorCaptcha tip"></span>
+                                    </td>
+                                </tr>
+                            </table>
                         </li>
                         <li>
                             <p class="paa"></p>
@@ -125,10 +132,10 @@
 </body>
     <script type="text/javascript">
             function loadIdentify(){
-                document.getElementById("identifyImg").src = '../index.php/Home/Code/code?' + Math.random()
+                document.getElementById("identifyImg").src = '<?php echo U("Code/code");?>?' + Math.random()
             }
     loadIdentify();
-    var url="<?php echo U('Home/Index/index');?>";
+    var loginUrl="<?php echo U('Login/login');?>";
 
 </script>
 <script src="/B2C_SHOP/Public/js/jquery.min.js"></script>

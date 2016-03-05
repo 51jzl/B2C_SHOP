@@ -38,7 +38,6 @@ function getFormJson(form) {
 //调用form表单执行
 $(function(){
 	$('.form').bind('submit', function(){
-
 		ajaxSubmit(this, function(data){
 			if(data.status=='ok'){
 				returnSuccess(data.info);//成功返回参数

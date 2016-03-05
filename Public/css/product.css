@@ -1,4 +1,8 @@
 /**css document***/
+.fontset{
+	font-family: "微软雅黑";
+	font-size: 0.75em;
+}
 .banner{
 	width:100%;
 	float:left;
@@ -77,7 +81,7 @@
 	}
 .index_ayy a{
 	font-size:14px;
-	font-family:"宋体";
+	font-family: "微软雅黑";
 	color:#444;
 	font-weight:bold;
 	margin-right:10px;
@@ -918,7 +922,28 @@
 	padding:30px;
 	margin-top:55px;
 	margin-bottom:200px;
-	}
+    background: rgba(255, 255, 255, 0.9);
+    /**透明度**/
+    filter:alpha(opacity=95);
+    -moz-opacity: 0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+.errorLogin{
+    background: #ffe3d6 none repeat scroll 0 0;
+    border: 1px solid #ffb4a8;
+    color: #6c6c6c;
+    float: left;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 6px 10px;
+    width: 95%;
+    margin-top: 4px;
+    text-align: center;
+    display: none;
+}
 .meligo{
 	width:100%;
 	float:left;
@@ -3830,11 +3855,14 @@ margin-left:55px;}
    color:#ff5400;
    }
 .tip{
-	display:block;
+    display: none;
 	float:left;
 	color: red;
 	margin-top:5px;
 	margin-right:4px;
+	font-family: "微软雅黑";
+	font-size: 0.75em;
+
 	}
 .tip li{
 	display:block;

@@ -32,18 +32,21 @@
         <div class="inner">
             <!--  <div class="loginbanner"><a href="#"><img  src="/B2C_SHOP/Public/images/beijing.jpg"></a></div>-->
             <div class="loginbox">
-                <div class="meligo"><span>登录</span></div>
+                <div class="meligo"><span >登录</span></div>
+                <span  class="errorLogin">啊啊啊啊</span>
                 <ul class="loginlist">
+                    <form class="form" method="post" action="<?php echo U('Login/CheckLogin');?>">
                     <li>
                         <div class="lgiuser">
                             <p><img src="/B2C_SHOP/Public/images/ic64.png"></p>
-                            <input type="text" value="用户名/邮箱">
+                            <input name="username" type="text" placeholder="请输入帐号" maxlength="30">
                         </div>
+
                     </li>
                     <li>
                         <div class="lgiuser">
                             <p><img src="/B2C_SHOP/Public/images/ic65.png"></p>
-                            <input type="text" value="密码">
+                            <input name="password" type="password" placeholder="请输入密码" maxlength="22">
                         </div>
                     </li>
                     <li>
@@ -51,8 +54,9 @@
                         <a href="#" class="rember">忘记密码？</a>
                     </li>
                     <li>
-                        <input type="button" class="logbtn" value="登    录">
+                        <input type="submit" class="logbtn" value="登    录">
                     </li>
+                    </form>
                     <li>
                         <p class="nimember"> 还不是51建站网用户？<a href="../register/register.html"> 马上注册</a></p>
                     </li>
@@ -110,4 +114,6 @@
 <script src="/B2C_SHOP/Public/js/jquery.min.js"></script>
 <script src="/B2C_SHOP/Public/js/bootstrap.min.js"></script>
 <script src="/B2C_SHOP/Public/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/B2C_SHOP/Public/js/form.js"></script>
+<script src="/B2C_SHOP/Public/js/login.js"></script>
 </html>

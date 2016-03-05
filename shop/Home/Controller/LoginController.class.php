@@ -10,9 +10,10 @@ class LoginController extends Controller {
     	$Columns=R("DbName/dbid");//动态数据库
     	$password=md5(I('password'));
     	$username=I('username');
+		echo $username;
+		echo $password;
     	if ($username&&$password) {
     		$where['username'] = $username;
-    		$where['password']	=$password;
     		$list = M("user")->field("userid,password")->where($where)->find();
     		// 注意这里必须小写/* dump($list);
     		if ($list['password'] == $password) {
