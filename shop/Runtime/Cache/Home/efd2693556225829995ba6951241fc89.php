@@ -33,12 +33,12 @@
 <div class="header">
     <div class="headtop">
         <div class="inner">
-            <div class="hi">B2C首页 Hi , 欢迎来到51建站啦B2C商城<a href="login/login.html" style="color: red">亲，请登录</a><a href="index.php/register/register.html">
+            <div class="hi">B2C首页 Hi , 欢迎来到51建站啦B2C商城<a href="index.php/login/login.html" style="color: red">亲，请登录</a><a href="index.php/register/register.html">
                 免费注册</a></div>
             <div class="hilink">
                 <a href="#">我的订单 <img src="/B2C_SHOP/Public/images/ta6.png"></a>
                 <span>|</span>
-                <a href="#">购物车<b> 0</b> </a>
+                <a href="index.php/center/cart.html">购物车<b> 0</b> </a>
                 <span>|</span>
                 <a href="#"> 我的收藏</a>
                 <span>|</span>
@@ -50,7 +50,7 @@
     </div>
     <div class="headdw">
         <div class="inner">
-            <div class="logo"><a href="index.html"><img src="/B2C_SHOP/Public/images/51jzl.png"></a></div>
+            <div class="logo"><a href="../index.html"><img src="/B2C_SHOP/Public/images/51jzl.png"></a></div>
             <div class="search">
                 <div class="searchone">
                     <ul>
