@@ -1,9 +1,8 @@
 ﻿function returnSuccess(info){//成功返回参数
-
+	Showbo.Msg.alert('注册成功!跳转登录页面...');
     setTimeout(function() {
         window.location.href = loginUrl;
-    }, 2000);
-
+    }, 3000);
 }
 function returnError(info){//失败返回参数
     //判断返回值
@@ -40,11 +39,17 @@ function validateForm(name,data){
         }
     }
     if(name=='password'&&data.length==0){
-		$(".errorPassword").html("请输入密码！").show(500);
+		$(".errorPassword").html("请输入密码!").show(500);
 		ErrorTotal++;
-	}else{
-        $(".errorPassword").hide();
+	}else if(name=='password'&&data.length>0){
+        if(name=='password'&&data.length>30){
+            $(".errorPassword").html("密码长度不正确").show(500);
+            ErrorTotal++;
+        }else{
+            $(".errorPassword").hide();
+        }
     }
+
     if(name=='repassword'&&data.length==0){
 		$(".errorRepassword").html("请输入确认密码！").show(500);
 		ErrorTotal++;

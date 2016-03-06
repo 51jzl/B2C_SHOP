@@ -10,8 +10,6 @@ class LoginController extends Controller {
     	$Columns=R("DbName/dbid");//动态数据库
     	$password=md5(I('password'));
     	$username=I('username');
-		echo $username;
-		echo $password;
     	if ($username&&$password) {
     		$where['username'] = $username;
     		$list = M("user")->field("userid,password")->where($where)->find();
@@ -21,7 +19,7 @@ class LoginController extends Controller {
     			session('userid', $list['userid']);
     			$this->ajaxReturn(array('status' => 'ok', 'info' => '登录成功'));
     		} else {
-    			$this->ajaxReturn(array('status' => 'no', 'info' => '用户号码或者密码不正确'));
+    			$this->ajaxReturn(array('status' => 'no', 'info' => '用户名或者密码不正确'));
     		}
     	}else {
     			$this->ajaxReturn(array('status' => 'no', 'info' => '请输入用户名密码'));

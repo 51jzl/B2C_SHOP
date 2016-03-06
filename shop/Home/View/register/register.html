@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta name="description" content="模版">
-    <meta name="author" content="模版">
+    <meta name="description" content="B2C_注册">
+    <meta name="author" content="B2C_注册">
     <link rel="icon" href="__PUBLIC__/images/index.ico">
     <link href="__PUBLIC__/css/base.css" rel="stylesheet" type="text/css"/>
     <link href="__PUBLIC__/css/product.css" rel="stylesheet" type="text/css"/>
+    <link href="__PUBLIC__/css/showBo.css" rel="stylesheet" type="text/css"/>
 
     <!--[if lt IE 9]>
     <script src="__PUBLIC__/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -53,12 +54,12 @@
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>设置密码：</p>
-                            <input id="password" name="password" type="password" placeholder="请输入6-22位数字字母组合密码" class="text2">
+                            <input id="password" name="password" type="password" maxlength="22" placeholder="请输入6-22位数字字母组合密码" class="text2">
                             <span  class="errorPassword tip"></span>
                         </li>
                         <li>
                             <p class="paa"><span class="pab">*</span>确认密码：</p>
-                            <input id="repassword" name="repassword" type="password" placeholder="请再次输入密码" class="text2">
+                            <input id="repassword" name="repassword" type="password" maxlength="22" placeholder="请再次输入密码" class="text2">
                             <span  class="errorRepassword tip"></span>
                         </li>
                         <li>
@@ -114,6 +115,7 @@
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/js/ie10-viewport-bug-workaround.js"></script>
+<script src="__PUBLIC__/js/showBo.js"></script>
 <script src="__PUBLIC__/js/form.js"></script>
 <script src="__PUBLIC__/js/register.js"></script>
 
