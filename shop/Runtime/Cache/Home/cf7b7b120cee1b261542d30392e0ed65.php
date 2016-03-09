@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta name="description" content="模版">
-    <meta name="author" content="模版">
+    <meta name="description" content="B2C_注册">
+    <meta name="author" content="B2C_注册">
     <link rel="icon" href="/B2C_SHOP/Public/images/index.ico">
     <link href="/B2C_SHOP/Public/css/base.css" rel="stylesheet" type="text/css"/>
     <link href="/B2C_SHOP/Public/css/product.css" rel="stylesheet" type="text/css"/>
+    <link href="/B2C_SHOP/Public/css/showBo.css" rel="stylesheet" type="text/css"/>
 
     <!--[if lt IE 9]>
     <script src="/B2C_SHOP/Public/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -141,6 +142,7 @@
 <script src="/B2C_SHOP/Public/js/jquery.min.js"></script>
 <script src="/B2C_SHOP/Public/js/bootstrap.min.js"></script>
 <script src="/B2C_SHOP/Public/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/B2C_SHOP/Public/js/showBo.js"></script>
 <script src="/B2C_SHOP/Public/js/form.js"></script>
 <script src="/B2C_SHOP/Public/js/register.js"></script>
 

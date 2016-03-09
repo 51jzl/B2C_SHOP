@@ -111,6 +111,9 @@
 
 </div>
 </body>
+<script>
+	LoginURL="<?php echo U('index/index');?>"
+</script>
 <script src="/B2C_SHOP/Public/js/jquery.min.js"></script>
 <script src="/B2C_SHOP/Public/js/bootstrap.min.js"></script>
 <script src="/B2C_SHOP/Public/js/ie10-viewport-bug-workaround.js"></script>
